@@ -1,0 +1,25 @@
+Selenium Review 001
+
+Components of Selenium
+    - Selenium IDE (Selenium 1)
+    - Selenium RC ( Selenium 2)
+    -Selenium WebDriver (Selenium3) -> Selenium 4.x
+    -Selenium Grid
+
+Open Source Tool
+    -Visualize
+    -Customize
+    -Contribute
+
+Free License Tool
+
+    Supports multiple browser
+        - Chrome, FireFox, Safari, Edge, IE, Opera
+
+    Supports multiple OS
+        -Windows, Mac, Linus - does not support Unix
+
+    Supports Multiple Programming Languages
+        Java, C#, Python, Ruby, PHP, JavaScript
+
+    Supports W3C

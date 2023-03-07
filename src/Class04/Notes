@@ -1,0 +1,133 @@
+Xpath
+CCS
+
+Element Commands
+clea()
+getText()
+GetAttribute()
+
+
+----CSS----
+1-
+`Get an element using CSS selector
+    a: syntax -
+        tagName[attribute='attribute value']
+
+    the beauty about CSS selector is that instead of writing the full suntax you can also use shortcuts
+
+        classname---> tagName [classname='value'] you can write "tagName.value"---> .
+        ID ----> tagName[id='value'] you can write "tagName#value" ---> #
+
+Note -
+        In CSS selector we do not have the option of getting an element by TEXt
+
+        but CSS has this contains method that can be used
+                Syntax - for contains method for CSS
+                    tagName[attribute *='partial attribute value'] where * means contains here
+
+        CSS has other amazing features like
+                a-starts-with method in CSS:
+                    tagName[attribute ^='starting attribute value'] where ^ means starts with
+
+                    example - <input id="abra hello", email="rote"/>
+                    CSS using starts with method
+                        input[id^='abra']
+
+                b- ends-with method in CSS:
+                    $ symbol represents ends-with method in CSS
+                        example- <input id="abra hello", email="rote"/>
+
+                        write the CSS selector using ends with method:
+                            input[id $='hello']
+                             input[id $='o']---> will also work but might have multiple outcomes
+
+-----------------------------------------------------
+
+Approach to select the radio button-
+    1- locate the webElement in the DOM
+    2- write the appropriate locator to select it
+    3- use driver.findElement to find that in your code
+    4- click on it
+
+
+
+
+    isEnabled()--> check if the radio button can be selected or not. if not selectable usually it is greyed out
+    isDisplayed()---> checks if the webElement is displayed on the page or not
+    isSelected()--> checks if radio button is selected or not (return true if selected)
+
+
+    Red
+    Green
+    Blue
+    Pink
+            select blue
+                approch
+                    1-find the wenElement blue in the DOM
+                    2-write the locator to
+                    3- click on it
+
+            select all buttons
+                approach
+                    1- get all radio buttons by(driver.findElements and choose a locator that is common for all
+                    2-iterate through the list, get each one of them and check their attribute value.
+                    3- if color = red - select it
+
+                    attribute color=red
+
+
+-----------------Revision-------------------
+
+1- locators
+8 locators
+    1-id
+    2-name
+    3-className
+    4-partial link tex
+    5-link text
+    6-CSS
+    7-xpath
+    8-tagName
+
+
+WebElement Commands-
+    1-clear()
+    2-getText() --> get the text
+    3-getAttribute() ---> get the value of a particular attribute
+    4-isSelected()--> to check if the element is checked(clicked) or not
+    5- isDisplayed()--> is it on the screen or not
+    6- isEnabled()--> is it clickable or are we able to send text to it incase of a text box
+
+
+radio Buttons=
+    selece a radio button
+
+        Approach
+     1- open the DOM and inspect it
+     2-wright down the correct locator that will selece it
+     3-find that using driver.findElement in your code
+     4- just simply click it
+
+
+logic building
+
+    a scenario:
+
+        lets assume there are 4 radio buttons and you want to select the one that says "5-15"
+
+            1- inspect the radio button that you want to select i.e 5-15
+            2- write down the correct locator that selects the webElement 5-15
+            3- find the webElement using driver.findElement through code
+            4-just simply click on it.
+
+        is this a good approach?
+            no- in future if we want to select 0-5 or any other value it will be a hustle
+
+        better approach-
+            1-inspect the webElement of interest (4 radio buttons) and find them in DOM
+            2- write the locator in such a way that it selects all 4
+            3- find all those elements in the code using driver.findElements
+            4-loop though the list and get each WebElement one by one
+            5- whenever while iterating you go though figure out which attribute might help you in detecting
+            it is your desired one(by inspecting the variable DOM
+            6- if you get your desired use if else to click on it.

@@ -1,0 +1,39 @@
+How many locators do we have in Selenium?
+
+8 locators
+    1.ID
+    2.Name
+    3.Class
+    4.LinkText-->they can only be used with a link and must have text (must have and <a>  </a> tag)
+    5.Xpath
+    6.Css
+    7.TagName---> just specify the tag that you want to find multiple web elements
+    8.Partial Linktext--->they can only be used with a link
+
+Why do we have multiple locators?
+    sometimes there might be a locator with duplicate value
+        <input id"email",name=a
+
+
+     ometimes the developers might not provide you with all the locators
+
+There are some important things that you should remember while selecting locators
+    if a attribute value has a number in it, it is better to avoid it and use an alternative locator!
+
+Difference between linkText and partialLinkText
+    a partial link text can use just a part of the link text
+
+
+    ---------------
+    what did we learn today
+
+locators-
+    in selenium help us find the web elements
+    8 locators
+    id, name, className
+    linkText, partialLinkText (only be used for <a> and it must have some text)
+    TagName- we just need to pass the tagName and it is going to find that particular webElement
+DOM- Document Object Model
+    here we have the whole code for the website
+       example- if there are two elements with the same attribute value what will happen?
+            Selenium is going to get the first one it encounters.
